@@ -1,1 +1,21 @@
 #hello world
+  476  git merge origin head
+  477  git fetch origin
+  478  git status
+  479  git log --oneline
+  480  git checkout -b feature origin/feature
+  481  git status
+  482  git merge master
+  483  git checkout -b featurex origin/feature
+  484  git log --oneline
+  485  git branch -l
+  486  git fetch origin
+  487  git log --oneline
+  488  git checkout master
+  489  git pull
+  490  git diff
+  491  git status
+  492  git merge --no-ff feature
+  493  git push origin master
+  494  git head
+  495  git log --oneline
