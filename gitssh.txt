@@ -12,3 +12,109 @@ git clone git@github.com:mayurjainf007/testing.git
 
 git log --oneline --graph --all --decorate
 git log --stat
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git log --oneline
+5fc21cc (HEAD -> feature) third commit
+2b7e45a third commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (master)
+$ git log --oneline
+f6bd6b3 (HEAD -> master, origin/master, origin/HEAD) fourth commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (master)
+$ git commit -am "four commit"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (master)
+$ git log --oneline
+f6bd6b3 (HEAD -> master, origin/master, origin/HEAD) fourth commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git log --oneline
+5fc21cc (HEAD -> feature) third commit
+2b7e45a third commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git merge origin/feature
+Already up to date.
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git log --oneline
+5fc21cc (HEAD -> feature) third commit
+2b7e45a third commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git merge origin/master
+Merge made by the 'recursive' strategy.
+ gitssh.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git diff --staged
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git diff
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git log --oneline
+57501f4 (HEAD -> feature) Merge remote-tracking branch 'origin/master' into feature
+f6bd6b3 (origin/master, origin/HEAD, master) fourth commit
+5fc21cc third commit
+2b7e45a third commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+admin@DESKTOP-C8NL3LH MINGW64 ~/Desktop/testing (master)
+$ git log --oneline
+f6bd6b3 (HEAD -> master, origin/master, origin/HEAD) fourth commit
+4e32b9a "Merging" Merge branch 'feature'
+96fbd9d (origin/feature) "Second Commit"
+70d8b08 Merge pull request #1 from mayurjainf007/feature
+ec139c3 First Commit
+41493e5 Initial commit
